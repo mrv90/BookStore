@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const userRouter = require('../router/userRouter');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -11,7 +12,8 @@ app.get('/', (req, res, next) => {
   res.status(200).json({ message: 'service is up!' });
 });
 
-// my routers goes here !
+// routers
+app.use('/users', userRouter);
 
 app.use((req, res, next) => {
   const error = new Error('Not found');
