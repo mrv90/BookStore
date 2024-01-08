@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const { connect } = require('../db/db');
 const cors = require('cors');
 const userRouter = require('../router/userRouter');
 
@@ -29,5 +30,7 @@ app.use((error, req, res, next) => {
     },
   });
 });
+
+connect(); // connect only one time .. so put it, down here !
 
 module.exports = app;
