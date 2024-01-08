@@ -1,5 +1,7 @@
 # BookStore
 
+This is full-stack solution, separated to two projects: frontend (client) and the backend (server).
+
 ## To run the backend
 
 ```shell
