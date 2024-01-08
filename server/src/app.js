@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
-const { connect } = require('../db/db');
+const { connect } = require('./db');
 const cors = require('cors');
-const userRouter = require('../controllers/user');
+const userRouter = require('./controllers/user');
+const authRouter = require('./controllers/auth');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -14,7 +15,8 @@ app.get('/', (req, res, next) => {
 });
 
 // routers
-app.use('/users', userRouter);
+app.use('/api/users', userRouter);
+app.use('/api/auth', authRouter);
 
 app.use((req, res, next) => {
   const error = new Error('Not found');

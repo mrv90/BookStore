@@ -1,5 +1,5 @@
 const http = require('http');
-const app = require('./src/app/app');
+const app = require('./app');
 require('dotenv').config();
 
 http.createServer(app).listen(process.env.port, () => {

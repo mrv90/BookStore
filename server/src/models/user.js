@@ -1,15 +1,19 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
-  address: { type: String, required: true },
-  city: { type: String, required: true },
-  state: { type: String, required: true },
-  zip: { type: String, required: true },
-  email: { type: String, required: true },
-  password: { type: String, required: true },
+  // _id: mongoose.Schema.Types.ObjectId,
+  name: { type: String, required: true },
+  username: { type: String, required: true },
+  passwordHash: { type: String, required: true },
+});
+
+userSchema.set('toJSON', {
+  transform: (document, returnedObject) => {
+    returnedObject.id = returnedObject._id.toString();
+    delete returnedObject._id;
+    delete returnedObject.__v;
+    delete returnedObject.passwordHash;
+  },
 });
 
 module.exports = mongoose.model('User', userSchema);
