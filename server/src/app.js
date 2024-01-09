@@ -3,7 +3,7 @@ const app = express();
 const { connect } = require('./db');
 const cors = require('cors');
 const userRouter = require('./controllers/user');
-const authRouter = require('./controllers/auth');
+const authRouter = require('./controllers/authn');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
