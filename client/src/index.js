@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
-import Register from './components/Register';
-import Login from './components/Login';
-import Authors from './components/Authors';
-import Books from './components/Books';
-import NotFound from './components/NotFound';
-import About from './components/About';
+import App from './components/App';
+import Register from './components/pages/Register';
+import Login from './components/pages/Login';
+import Authors from './components/pages/Authors';
+import Books from './components/pages/Books';
+import NotFound from './components/pages/NotFound';
+import About from './components/pages/About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />}>
+      <Route path="/" element={<App />}>
         <Route path="/login" element={<Login />} />
         <Route path="/authors" element={<Authors />} />
         <Route path="/books" element={<Books />} />

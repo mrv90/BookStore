@@ -1,0 +1,5 @@
+@import url('../../vars.css');
+
+.container {
+  border: 1.5px dashed blue;
+}

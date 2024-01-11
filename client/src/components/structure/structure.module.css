@@ -1,0 +1,25 @@
+@import url('../../vars.css');
+
+.header {
+  border: dashed 2px orange;
+  position: relative;
+
+  padding-top: 3vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.nav {
+  float: right;
+  a {
+    padding-right: 0.5vw;
+  }
+}
+
+#footer {
+  border: 1.5px dashed royalblue;
+
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 3vh;
+}

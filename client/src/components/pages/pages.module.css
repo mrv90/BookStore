@@ -1,0 +1,7 @@
+@import url('../../vars.css');
+
+#home {
+  border: 1.5px dashed red;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
